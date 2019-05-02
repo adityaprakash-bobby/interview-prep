@@ -34,7 +34,7 @@ int main() {
   }
 
   //you will observe that maps maintain the order of the keys
-  std::cout << "\nMultimaps:" << std::endl;
+  std::cout << "\nMultimap:" << std::endl;
   //Now let's check the multimap structure. Similar to the map
   //but allows multiple values to a single key.
   std::multimap<int, int> mmap_int_int;
@@ -74,9 +74,26 @@ int main() {
 
   }
 
+  std::cout << "\nUnorderd Multimap:" << std::endl;
   //similarly there are unordered multimaps. It's same as doing above.
   //Unordered maps are faster than just maps with time complexity
   //T(n) = O(1) since they are implementations of hashtables
+  std::unordered_multimap<int, int> ummap_int_int;
+
+  //insert few key value pairs
+  ummap_int_int.insert(std::make_pair(2,20));
+  ummap_int_int.insert(std::make_pair(2,200));
+  ummap_int_int.insert(std::make_pair(3,30));
+  ummap_int_int.insert(std::make_pair(1,10));
+
+  //print the unordered multimap
+  for(auto it = ummap_int_int.begin(); \
+           it != ummap_int_int.end(); it++) {
+
+    std::cout << it->first << "-->" << it->second << std::endl;
+
+  }
+
   return 0;
 
 }
