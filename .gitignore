@@ -33,3 +33,4 @@
 
 # Settings
 .vscode/*
+.vimrc
