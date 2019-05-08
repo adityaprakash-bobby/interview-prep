@@ -1,7 +1,7 @@
 #include <iostream>
 #include <list>
 
-/* Implementation of Breadth First Search algorithm */
+/* Implementation of Depth First Search algorithm */
 
 // Represent graph using adjacency list
 class Graph {
@@ -23,7 +23,7 @@ class Graph {
     // Function to add edge to the graph
     void add_edge(int v, int w);
 
-    // Funtion to find the BFS from a node
+    // Funtion to find the DFS from a node
     void dfs(int v);
 };
 
