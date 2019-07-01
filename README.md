@@ -7,7 +7,7 @@
 ## Week 1
 ### Dynamic Programming
 - [X] Read [Dynamic Programming Notes Hackerearth](https://www.hackerearth.com/practice/notes/dynamic-programming-i-1/)
-- [ ] Read [DP Tutorial involving grids](https://www.hackerearth.com/practice/notes/dynamic-programming-problems-involving-grids/)
+- [X] Read [DP Tutorial involving grids](https://www.hackerearth.com/practice/notes/dynamic-programming-problems-involving-grids/)
 - [ ] Read [TopCoder Tutorial on DP](https://www.topcoder.com/community/competitive-programming/tutorials/dynamic-programming-from-novice-to-advanced/)
 - Solve the following classical problems:
   - [ ] [Max 3D Range Sum](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=649&page=show_problem&problem=1696)
