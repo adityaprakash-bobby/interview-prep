@@ -6,6 +6,7 @@
 
 using namespace std;
 
+/* Function to return the maximum contiguous array sum */
 int maxContiguousArray(vector<int> &A) {
     
     int max_sum = INT_MIN;
@@ -28,6 +29,7 @@ int maxContiguousArray(vector<int> &A) {
     return max_sum;
 }
 
+/* Driver to test the above function */
 int main(int argc, char const *argv[])
 {
     vector<int> test = {-2, 1, -3, 4, -1, 2, 1, -5, 4};

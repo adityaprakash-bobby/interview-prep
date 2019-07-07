@@ -5,6 +5,7 @@
 
 using namespace std;
 
+/* Function to return a spiral order matrix */
 vector<vector<int>> spiralOrderII(int n) {
 
     vector<vector<int>> res (n, vector<int> (n, 0));
@@ -46,6 +47,7 @@ vector<vector<int>> spiralOrderII(int n) {
 
 }
 
+/* Driver to test the above function */
 int main(int argc, char const *argv[])
 {
     int n = 5;

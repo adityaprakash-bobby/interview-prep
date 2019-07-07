@@ -6,6 +6,7 @@
 
 using namespace std;
 
+/* Returns the index range of array to be flipped */
 vector<int> maxFlipsArr(string A) {
 
     vector<int> res;
@@ -42,6 +43,7 @@ vector<int> maxFlipsArr(string A) {
     return res;
 }
 
+/* Driver to test the above function */
 int main(int argc, char const *argv[])
 {
     string test = "01100001";

@@ -7,6 +7,7 @@
 
 using namespace std;
 
+/* Function to find is a sentence is a palindrome */
 int palindrome(string A) {
 
     int i = 0, j = A.size() - 1;
@@ -47,6 +48,7 @@ int palindrome(string A) {
     return 0;
 }
 
+/* Driver to test the above function */
 int main(int argc, char const *argv[])
 {
     string str = ",.";

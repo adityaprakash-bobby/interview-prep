@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+/* Function to find the number od trailing zeros in a factorial */
 int trailing_0s (int A) {
 
     int count_5s = 0;
@@ -25,6 +26,7 @@ int trailing_0s (int A) {
 
 }
 
+/* Driver to test the above function */
 int main(int argc, char const *argv[])
 {
     int number = 700;
