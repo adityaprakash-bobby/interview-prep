@@ -2,6 +2,7 @@
 #include <vector>
 using namespace std;
 
+/* Function to return the number in array which occurs only once */
 int appearOnce(vector<int> A) {
 
     int x = A[0];
@@ -13,6 +14,7 @@ int appearOnce(vector<int> A) {
     return x;
 }
 
+/* Driver function to test the above function */
 int main(int argc, char const *argv[])
 {
     vector<int> A = {1, 3, 3, 1, 4};
