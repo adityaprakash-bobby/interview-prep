@@ -12,7 +12,7 @@ int minXORPair(vector<int> A) {
 
 	sort(A.begin(), A.end());
 
-	for (int i = 0; i <= A.size() - 1; i++) {
+	for (int i = 0; i < A.size() - 1; i++) {
 		min_xor = min(min_xor, A[i]^A[i+1]);
 	}
 
