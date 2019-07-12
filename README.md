@@ -39,7 +39,7 @@
 ### String Algorithms
 1. #### Reading material
 - [X] [Basics of String manipulation](https://www.hackerearth.com/practice/algorithms/string-algorithm/basics-of-string-manipulation/tutorial/)
-- [ ] [KMP algorithm](https://www.hackerearth.com/practice/algorithms/string-algorithm/string-searching/tutorial/)
+- [X] [KMP algorithm](https://www.hackerearth.com/practice/algorithms/string-algorithm/string-searching/tutorial/)
 - [ ] [Z algorithm](https://www.hackerearth.com/practice/algorithms/string-algorithm/z-algorithm/tutorial/)
 - [ ] [Manachar's algorithm](https://www.hackerearth.com/practice/algorithms/string-algorithm/manachars-algorithm/tutorial/)
 - [ ] [Rabin-Karp and KMP TopCoder](https://www.topcoder.com/community/competitive-programming/tutorials/introduction-to-string-searching-algorithms/)
