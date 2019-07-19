@@ -2,6 +2,7 @@
 
 using namespace std;
 
+/* Class to hold the node data */
 class Node {
    
     public:
