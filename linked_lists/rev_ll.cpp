@@ -58,10 +58,25 @@ void printLL(Node* head) {
     return;
 }
 
-// void reverseLL() {
+Node* reverseLL(Node* head) {
 
+    Node* prev_node = NULL;
+    Node* curr_node = head;
+    Node* next_node;
 
-// }
+    while (curr_node != NULL) {
+
+        next_node = curr_node->next;
+        curr_node->next = prev_node;
+        prev_node = curr_node;
+        curr_node = next_node;
+
+    }
+
+    head = prev_node;
+
+    return head;
+}
 
 int main(int argc, char const *argv[])
 {
@@ -71,6 +86,10 @@ int main(int argc, char const *argv[])
     head = insertNode(head, 200);   
     head = insertNode(head, 300);   
     head = insertNode(head, 400);   
+
+    printLL(head);
+
+    head = reverseLL(head);
 
     printLL(head);
 
