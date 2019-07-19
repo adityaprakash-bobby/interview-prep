@@ -11,6 +11,7 @@ class Node {
 
 };
 
+/* Function to insert node at the end of a list */
 Node* insertNode(Node* head, int data) {
 
     Node* temp = head;
@@ -35,6 +36,7 @@ Node* insertNode(Node* head, int data) {
     return head;
 }
 
+/* Function to print the list given the head */
 void printLL(Node* head) {
 
     Node* temp = head;
@@ -58,6 +60,7 @@ void printLL(Node* head) {
     return;
 }
 
+/* Function to reverse the linked list */
 Node* reverseLL(Node* head) {
 
     Node* prev_node = NULL;
@@ -78,6 +81,7 @@ Node* reverseLL(Node* head) {
     return head;
 }
 
+/* Driver to test the above function */
 int main(int argc, char const *argv[])
 {
     Node* head = NULL;
