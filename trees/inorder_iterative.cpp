@@ -27,39 +27,35 @@ TreeNode* addNode(int val) {
 
 }
 
-/* Function to return the postorder traversal of a tree */
-vector<int> postorderTraversal(TreeNode* root) {
+/* Function to return the inorder traversal of a binary tree */
+vector<int> inorderTraversal(TreeNode* A) {
 
     vector<int> res;
+    stack<TreeNode *> st;
+    TreeNode* curr = A;
 
-    if (root == NULL) {
-        return res;
-    }
+    while (curr != NULL || st.empty() == false) {
 
-    stack<TreeNode*> st1;
+        while (curr != NULL) {
 
-    st1.push(root);
+            st.push(curr);
+            curr = curr->left;
 
-    while (st1.empty() == false) {
-
-        TreeNode* top = st1.top();
-        st1.pop();
-        res.insert(res.begin(), top->val);
-
-        if (top->left) {
-            st1.push(top->left);
         }
 
-        if (top->right) {
-            st1.push(top->right);
-        }
+        curr = st.top();
+        st.pop();
+
+        res.push_back(curr->val);
+
+        curr = curr->right;
 
     }
-    
+
     return res;
 }
 
-/* Driver to test the above function */
+/* Driver to test tge above code */
 int main(int argc, char const *argv[])
 {
     
@@ -72,7 +68,8 @@ int main(int argc, char const *argv[])
     root->right->left  = addNode(6);
     root->right->right = addNode(7);
     
-    vector<int> res = postorderTraversal(root);
+    
+    vector<int> res = inorderTraversal(root);
 
     for (int i = 0; i < res.size(); i++) {
         cout << res[i] << " ";
