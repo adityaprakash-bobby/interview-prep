@@ -45,10 +45,12 @@ vector<int> levelOrderTraversal(TreeNode* root) {
         TreeNode* temp = q.front();
         q.pop();
         level_order.push_back(temp->data);
+        
         if (temp->left != NULL)
             q.push(temp->left);
         if (temp->right != NULL)
             q.push(temp->right);
+            
     }
 
     return level_order;

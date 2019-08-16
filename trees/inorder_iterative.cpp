@@ -55,7 +55,7 @@ vector<int> inorderTraversal(TreeNode* A) {
     return res;
 }
 
-/* Driver to test tge above code */
+/* Driver to test the above code */
 int main(int argc, char const *argv[])
 {
     
