@@ -30,10 +30,12 @@ Point subtract(Point b, Point a) {
 
 }
 
+// Function to get the vector cross-product of two points
 double getCrossProduct(Point a, Point b) {
     return (a.x*b.y - b.x*a.y);
 }
 
+// Function to determine where the point 'p' lies w/r/t to 'a' and 'b'
 POINT_POSITION getDirection(Point a, Point b, Point p) {
 
     // Shift points w/r/t to the origin
@@ -52,6 +54,7 @@ POINT_POSITION getDirection(Point a, Point b, Point p) {
     }
 }
 
+// Driver to test the above function
 int main(int argc, char const *argv[])
 {
     Point point_a = {
