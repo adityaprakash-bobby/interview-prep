@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// Function to find the Z Array for string matching purpose
 vector<int> getZArray(string str) {
 
     int size = (int) str.size();
@@ -37,6 +38,7 @@ vector<int> getZArray(string str) {
     return Z;
 }
 
+// Driver to test the above function
 int main(int argc, char const *argv[])
 {
     string test = "abaaabaa";
