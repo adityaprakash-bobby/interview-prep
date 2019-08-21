@@ -108,7 +108,7 @@ Node* partitionList(Node* head, int x) {
     }
 
     less->next = ptr2;
-    return less;
+    return ptr1;
 }
 
 /* Driver to test the above function */
@@ -118,13 +118,13 @@ int main(int argc, char const *argv[])
     Node* part = NULL;
 
     head = insertNode(head, 100);
-    // head = insertNode(head, 200);   
-    // head = insertNode(head, 300);   
-    // head = insertNode(head, 400);   
+    head = insertNode(head, 200);   
+    head = insertNode(head, 300);   
+    head = insertNode(head, 400);   
 
     printLL(head);
 
-    part = partitionList(head, 100);
+    part = partitionList(head, 400);
 
     printLL(part);
 
