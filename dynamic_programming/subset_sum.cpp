@@ -12,7 +12,7 @@ bool subsetSum(vector<int> A, int sum) {
         subset[i][0] = true;
     }
     
-    for (int j = 0; j <= sum; j++) {
+    for (int j = 1; j <= sum; j++) {
         subset[0][j] = false;
     }
 
