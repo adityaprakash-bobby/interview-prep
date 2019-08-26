@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 
 using namespace std;
 
@@ -7,8 +8,10 @@ class Node {
    
     public:
         
-        int data;
-        Node* next;
+    int data;
+    Node* next;
+    
+    Node(int x) : data(x), next(NULL) {}
 
 };
 
@@ -16,11 +19,8 @@ class Node {
 Node* insertNode(Node* head, int data) {
 
     Node* temp = head;
-    Node* new_node = new Node();
+    Node* new_node = new Node(data);
     
-    new_node->data = data;
-    new_node->next = NULL;
-
     if (head == NULL) {
         
         head = new_node;
@@ -64,14 +64,48 @@ void printLL(Node* head) {
 /* Function to remove duplicates from the linked list */
 Node* removeDuplicates(Node* head) {
 
-    int prev_data = head->data;
+    // If the list has no elements or a single element, return the head as such
+    if (head == NULL || head->next == NULL) {
+        return head;
+    }
+
+    // Make a dummy node that seems to be in the beginning of the given list
+    Node* dummy = new Node(INT_MIN);
+    dummy->next = head;
+
+    // Will be using 3 pointers for the job to be done. 'prev' marks the dummy
+    // start point, 'curr' to the head and 'next' tracks where the same data 
+    // nodes differ
+    Node* prev = dummy;
     Node* curr = head;
 
-    while (curr != NULL) {
+    while (curr != NULL && curr->next != NULL) {
+
+        Node* next = curr->next;
+
+        if (curr->data == next->data) {
+            
+            // Places the curr and the next pointer in the boundary of two
+            // different numbers.             
+            while (curr->next != NULL && curr->data == next->data) {
+                curr = curr->next;
+                next = next->next;
+            }
+
+            // set the links for the main list
+            prev->next = next;
+            curr = next;
+
+        } else {
+
+            prev = prev->next;
+            curr = curr->next;
+
+        }
 
     }
 
-    return head;
+    return dummy->next;
 }
 
 /* Driver to test the above function */
@@ -87,7 +121,7 @@ int main(int argc, char const *argv[])
     head = insertNode(head, 300);   
     head = insertNode(head, 400);   
 
-    printLL(head);
+    // printLL(head);
 
     head = removeDuplicates(head);
 
