@@ -58,6 +58,7 @@ void printLL(ListNode* head) {
     return;
 }
 
+/* Function to return if a list is palindrome or not */
 bool isPalindromeList(ListNode* head) {
 
     // If list is empty or is having single element, then return true
