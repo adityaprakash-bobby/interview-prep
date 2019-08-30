@@ -30,7 +30,6 @@ string getSimpleAbsolutePath(string path) {
             // do nothing
         } else if (folder == ".." && folders.size() == 0) {
             // do nothing
-            cout << "inside here" << endl;
         } else if (folder == "..") {
             folders.pop();
         } else {
