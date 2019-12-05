@@ -14,6 +14,10 @@ namespace Outer {
     
 } // namespace Outer
 
+void display() {
+    printf("This is some Global text\n");
+}
+
 int main(int argc, char const *argv[])
 {
     // using namespace Outer;
@@ -22,6 +26,7 @@ int main(int argc, char const *argv[])
 
     Outer::display();
     Outer::Inner::display();
+    ::display();
 
     return 0;
 }
