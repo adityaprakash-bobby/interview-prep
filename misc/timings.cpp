@@ -32,6 +32,6 @@ void pushUtil() {
 
 int main(int argc, char const *argv[])
 {
-    printUtil();   
+    pushUtil();   
     return 0;
 }
