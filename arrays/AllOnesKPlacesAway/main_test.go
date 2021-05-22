@@ -9,7 +9,7 @@ func TestForArraysStartingNotWith1(t *testing.T) {
 
 	result := AllOnesKPlacesAway(arr, k)
 
-	if result == false {
+	if result != want {
 		t.Fatalf(`TestForArraysStartingNotWith1(%v, %v) = %v, want %v`, arr, k, result, want)
 	}
 
@@ -22,7 +22,7 @@ func TestForArrayWithOnly0s(t *testing.T) {
 
 	result := AllOnesKPlacesAway(arr, k)
 
-	if result == true {
+	if result != want {
 		t.Fatalf(`TestForArraysStartingNotWith1(%v, %v) = %v, want %v`, arr, k, result, want)
 	}
 }
@@ -34,7 +34,7 @@ func TestForArrayWithOnlyOne1(t *testing.T) {
 
 	result := AllOnesKPlacesAway(arr, k)
 
-	if result == true {
+	if result != want {
 		t.Fatalf(`TestForArraysStartingNotWith1(%v, %v) = %v, want %v`, arr, k, result, want)
 	}
 }
@@ -46,7 +46,7 @@ func TestForNormalTrueReturn(t *testing.T) {
 
 	result := AllOnesKPlacesAway(arr, k)
 
-	if result == false {
+	if result != want {
 		t.Fatalf(`TestForArraysStartingNotWith1(%v, %v) = %v, want %v`, arr, k, result, want)
 	}
 }
@@ -58,7 +58,7 @@ func TestForNormalFalseReturn(t *testing.T) {
 
 	result := AllOnesKPlacesAway(arr, k)
 
-	if result == true {
+	if result != want {
 		t.Fatalf(`TestForArraysStartingNotWith1(%v, %v) = %v, want %v`, arr, k, result, want)
 	}
 }
