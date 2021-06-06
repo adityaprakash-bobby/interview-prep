@@ -12,6 +12,20 @@ class MinHeap:
         """
         return str(self.__heap)
 
+    @property
+    def size(self) -> int:
+        """
+        Return the total number of elements in the heap
+        """
+        return self.__size
+
+    def isEmpty(self) -> bool:
+        """
+        Return true if the heap is empty, otherwise false
+        """
+        return self.__size == 0
+
+
     def __getLeftChildIndex(self, index: int) -> int:
         """
         This gets the index of the left child for a node
