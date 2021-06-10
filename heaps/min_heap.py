@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+from typing import List
 class MinHeap:
     def __init__(self) -> None:
         """
@@ -5,12 +8,31 @@ class MinHeap:
         """
         self.__size = 0
         self.__heap = []
+        self.__isHeap = True
+
+    @classmethod
+    def from_array(cls, array: List[int]) -> MinHeap:
+        """
+        Creates a MinHeap from the the given array
+        """
+        mHeap = cls()
+        mHeap.__size = len(array)
+        mHeap.__heap = [*array]
+        mHeap.__isHeap = False
+
+        mHeap.__heapify()
+
+        return mHeap
 
     def __repr__(self) -> str:
         """
         repr method
         """
         return str(self.__heap)
+
+    @property
+    def isHeap(self) -> bool:
+        return self.__isHeap
 
     @property
     def size(self) -> int:
@@ -25,18 +47,17 @@ class MinHeap:
         """
         return self.__size == 0
 
-
     def __getLeftChildIndex(self, index: int) -> int:
         """
         This gets the index of the left child for a node
         """
-        return 2*index + 1
+        return 2 * index + 1
 
     def __getRightChildIndex(self, index: int) -> int:
         """
         This gets the index of the right child for a node
         """
-        return 2*index + 2
+        return 2 * index + 2
 
     def __getParentIndex(self, index: int) -> int:
         """
@@ -83,7 +104,6 @@ class MinHeap:
         """
         return self.__heap[self.__getRightChildIndex(index)]
 
-
     def __swap(self, idx1: int, idx2: int) -> None:
         """
         Helper method to swap between two nodes based on their indices
@@ -104,12 +124,11 @@ class MinHeap:
             # update the current node as the parent node
             curNodeIdx = self.__getParentIndex(curNodeIdx)
 
-    def __heapifyDown(self) -> None:
+    def __heapifyDown(self, curNodeIndex: int = 0) -> None:
         """
-        This heapifies top to dowm from the root element
+        This heapifies top to dowm from the root element by default if current
+        node is not mentioned, else heapifies top to down from the given node
         """
-        curNodeIndex = 0
-
         while self.__hasLeftChild(curNodeIndex):
             smallerChildIndex = self.__getLeftChildIndex(curNodeIndex)
 
@@ -124,6 +143,15 @@ class MinHeap:
                 break
 
             curNodeIndex = smallerChildIndex
+
+    def __heapify(self) -> None:
+        """
+        This is used to create a heap from an existing array in-place
+        """
+        self.__isHeap = True
+
+        for curNodeIndex in range(self.__size - 1, -1, -1):
+            self.__heapifyDown(curNodeIndex)
 
     def add(self, num: int) -> None:
         """

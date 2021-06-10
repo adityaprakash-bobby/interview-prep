@@ -32,5 +32,8 @@
 *.app
 
 # Settings
-.vscode/*
 .vimrc
+
+# python env
+.env/
+.venv/
